@@ -35,7 +35,7 @@ public class Employee {
     }
     
     // getter for current nextEmpNum
-    public int getNextEmpNum(){
+    public static int getNextEmpNum(){
         return nextEmpNum;
     }
     

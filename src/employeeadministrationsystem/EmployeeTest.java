@@ -11,7 +11,7 @@ public class EmployeeTest {
         // declare and initialize projectGroup array for test employees
         Employee[] projectGroup  = new Employee[3];
         
-        // Instaciate test Employee objects
+        // Instatiate test Employee objects
         Employee empTest1 = new Employee("Joe Bloggs", "jb@gmail.com");
         Employee empTest2 = new Employee("Ann Banana", "ab@gmail.com");
         Employee empTest3 = new Employee("Tom Thumb", "tt@gmail.com");
@@ -20,6 +20,11 @@ public class EmployeeTest {
         projectGroup[0] = empTest1;
         projectGroup[1] = empTest2;
         projectGroup[2] = empTest3;
+        
+        System.out.println(Employee.getNextEmpNum());
+        System.out.println(empTest1);
+        System.out.println(empTest2);
+        System.out.println(empTest3);
     }
     
 }
