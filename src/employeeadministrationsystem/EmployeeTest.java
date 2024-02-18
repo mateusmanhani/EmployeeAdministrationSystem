@@ -22,9 +22,16 @@ public class EmployeeTest {
         projectGroup[2] = empTest3;
         
         System.out.println(Employee.getNextEmpNum());
-        System.out.println(empTest1);
-        System.out.println(empTest2);
-        System.out.println(empTest3);
+//        System.out.println(empTest1);
+//        System.out.println(empTest2);
+//        System.out.println(empTest3);
+        
+        int m = 0;
+        for (Employee emp : projectGroup){
+            if (emp.getEmpNum() > m) {
+                System.out.println(emp.getName());
+            }
+        }
     }
     
 }
