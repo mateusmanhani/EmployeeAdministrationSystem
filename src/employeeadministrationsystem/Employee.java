@@ -48,4 +48,14 @@ public class Employee {
         return empNum;
     }
     
+    // toString() method to represent the object as a String
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", empNum=" + empNum +
+                '}';
+    }
+    
 }
