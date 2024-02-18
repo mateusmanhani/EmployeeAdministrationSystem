@@ -2,6 +2,7 @@
 package employeeadministrationsystem;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  *
@@ -23,4 +24,24 @@ public class Company {
         this.staff = new ArrayList<Employee>();
     }
     
+    // add staff method
+    public void addNewStaff(Employee newEmp){
+        staff.add(newEmp);
+    }
+    
+    // get number of employees
+    public int getStaffNumber(){
+        return staff.size();
+    }
+    
+    // method to list all employee numbers with an employee number above a value given as parameter
+    public void listEmployees(int empNumThreshold){
+        Iterator<Employee> iterator = staff.iterator();
+        while (iterator.hasNext()){
+            Employee employee = iterator.next();
+            if ( employee.getEmpNum() > empNumThreshold){
+                System.out.println(employee.getName());
+            }
+        }
+    }
 }
