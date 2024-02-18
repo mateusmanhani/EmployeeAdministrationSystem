@@ -1,6 +1,9 @@
 
 package employeeadministrationsystem;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  *
  * @author Mateus Manhani
@@ -27,6 +30,7 @@ public class Employee {
     
     // setter for email
     public void setEmail(String email){
+        if (isValidEmail(email))    
         this.email = email;
     }
     
@@ -46,6 +50,22 @@ public class Employee {
     // getter for empNum
     public int getEmpNum(){
         return empNum;
+    }
+    
+    // method to ensure email is valid usign regex
+    private boolean isValidEmail(String email){
+        // Recipient name regex
+        String recipientNameRegex = "^[a-zA-Z0-9._%+-]{1,64}";
+        // Domain name regex
+        String domainNameRegex = "[a-zA-Z0-9.-]+\\.";
+        // Top-level domain regex
+        String topLevelDomainRegex = "[a-zA-Z]{2,}$";
+        // Combine all parts to form the complete regex
+        String emailRegex = recipientNameRegex + "@" + domainNameRegex + topLevelDomainRegex;
+        
+        Pattern pattern = Pattern.compile(emailRegex);
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
     }
     
     // toString() method to represent the object as a String
