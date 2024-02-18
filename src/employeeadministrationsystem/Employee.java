@@ -35,5 +35,17 @@ public class Employee {
         return nextEmpNum;
     }
     
+    // getter for name
+    public String getName(){
+        return name;
+    }
+    // getter for email
+    public String getEmail(){
+        return email;
+    }
+    // getter for empNum
+    public int getEmpNum(){
+        return empNum;
+    }
     
 }
