@@ -1,0 +1,39 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package employeeadministrationsystem;
+
+/**
+ *
+ * @author Mateus
+ */
+public class Manager extends Employee {
+    private String username;
+    private String password;
+    
+    // Constructor
+    public Manager(String name, String email, int empNum, String username,String password){
+        super(name,email); // Call superclass constructor with name and email
+        this.username = username;
+        this.password = password;        
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
+    
+}
