@@ -32,6 +32,10 @@ public class EmployeeTest {
                 System.out.println(emp.getName());
             }
         }
+        
+        Manager manager1 = new Manager("mateus","mm@gamil.com","mateus1","1234");
+        
+        System.out.println(manager1);
     }
     
 }

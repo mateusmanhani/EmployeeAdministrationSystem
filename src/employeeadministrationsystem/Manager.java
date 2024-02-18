@@ -13,7 +13,7 @@ public class Manager extends Employee {
     private String password;
     
     // Constructor
-    public Manager(String name, String email, int empNum, String username,String password){
+    public Manager(String name, String email, String username,String password){
         super(name,email); // Call superclass constructor with name and email
         this.username = username;
         this.password = password;        
@@ -35,5 +35,17 @@ public class Manager extends Employee {
         this.password = password;
     }
     
+    
+    // ToString method for debugging
+    @Override
+    public String toString() {
+        return "Manager{" +
+            "name='" + getName() + '\'' +
+            ", email='" + getEmail() + '\'' +
+            ", empNum=" + getEmpNum() +
+            ", username='" + username + '\'' +
+            ", password='" + password + '\'' +
+            '}';
+}
     
 }
