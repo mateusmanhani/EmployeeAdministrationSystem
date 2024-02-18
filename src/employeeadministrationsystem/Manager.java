@@ -34,7 +34,7 @@ public class Manager extends Employee {
         this.password = password;
     }
     
-    public boolean isAuthenticated(String username, String password){
+    public boolean isAuthenticated(){
         return username.equals(CORRECT_USERNAME) && password.equals(CORRECT_PASSWORD);
     }
     
