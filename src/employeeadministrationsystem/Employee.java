@@ -25,5 +25,15 @@ public class Employee {
         this.empNum = nextEmpNum++; //auto increment empNum to have unique employee numbers
     }
     
+    // setter for email
+    public void setEmail(String email){
+        this.email = email;
+    }
+    
+    // getter for current nextEmpNum
+    public int getNextEmpNum(){
+        return nextEmpNum;
+    }
+    
     
 }
