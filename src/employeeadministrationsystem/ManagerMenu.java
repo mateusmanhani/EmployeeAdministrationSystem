@@ -7,8 +7,8 @@ import java.util.Scanner;
  * @author Mateus Manhani
  */
 public class ManagerMenu {
-    private static final String MANAGER_USERNAME = "Gnomeo"; //valid username to give access
-    private static final String MANAGER_PASSWORD = "smurf"; // valid password to give access
+    private static final String CORRECT_USERNAME = "Gnomeo"; //valid username to give access
+    private static final String CORRECT_PASSWORD = "smurf"; // valid password to give access
     
     public static void start(){
         Scanner scanner = new Scanner(System.in);

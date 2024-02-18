@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package employeeadministrationsystem;
 
 /**
@@ -11,6 +7,9 @@ package employeeadministrationsystem;
 public class Manager extends Employee {
     private String username;
     private String password;
+    
+    private static final String CORRECT_USERNAME = "Gnomeo"; //valid username to give access
+    private static final String CORRECT_PASSWORD = "smurf"; // valid password to give access
     
     // Constructor
     public Manager(String name, String email, String username,String password){
@@ -35,6 +34,9 @@ public class Manager extends Employee {
         this.password = password;
     }
     
+    public boolean isAuthenticated(String username, String password){
+        return username.equals(CORRECT_USERNAME) && password.equals(CORRECT_PASSWORD);
+    }
     
     // ToString method for debugging
     @Override
