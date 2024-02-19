@@ -52,7 +52,7 @@ public class ManagerMenu {
                         System.out.println("Enter the new employee name: ");
                         String newEmpName = scanner.nextLine();
                         System.out.println("Enter the new employee email: ");
-                        String newEmpEmail = scanner.nextLine();
+                        String newEmpEmail = scanner.nextLine();// Need to catch exception if email is invalid before instatiating a new employee
                         //Instatiate new employee
                         Employee newEmp = new Employee(newEmpName,newEmpEmail);
                         // add new staff

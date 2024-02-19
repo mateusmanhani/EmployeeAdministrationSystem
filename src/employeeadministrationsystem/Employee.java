@@ -69,6 +69,9 @@ public class Employee {
         
         Pattern pattern = Pattern.compile(emailRegex);
         Matcher matcher = pattern.matcher(email);
+        if (!matcher.matches()){
+            throw new IllegalArgumentException("Invalid email address.");
+        }
         return matcher.matches();
     }
     
