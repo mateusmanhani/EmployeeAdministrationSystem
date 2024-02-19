@@ -28,8 +28,9 @@ public class ManagerMenu {
     private static void displayMenu(Scanner scanner, Company company){
         //Display menu options
         System.out.println("\nMenu:");
-        System.out.println("1. View current Staff");
+        System.out.println("1. View current staff");
         System.out.println("2. Add new staff");
+        System.out.println("4. Remove staff");
         System.out.println("3. Exit");
         System.out.println("Enter your choice: ");
         
@@ -52,6 +53,13 @@ public class ManagerMenu {
                 company.addNewStaff(newEmp);
                 break;
             case 3:
+                // Ask which employee will be removed
+                System.out.println("Enter the Employee number (integer) you would like removed from the staff: ");
+                int empNum = scanner.nextInt();
+                //remove staff
+                company.removeStaff(empNum);
+                break;
+            case 4:
                 //exit
                 System.out.println("Exiting Menu.");
                 break;
