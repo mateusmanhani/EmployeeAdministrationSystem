@@ -8,9 +8,6 @@ public class Manager extends Employee {
     private String username;
     private String password;
     
-    private static final String CORRECT_USERNAME = "Gnomeo"; //valid username to give access
-    private static final String CORRECT_PASSWORD = "smurf"; // valid password to give access
-    
     // Constructor
     public Manager(String name, String email, String username,String password){
         super(name,email); // Call superclass constructor with name and email
@@ -34,9 +31,6 @@ public class Manager extends Employee {
         this.password = password;
     }
     
-    public boolean isAuthenticated(){
-        return username.equals(CORRECT_USERNAME) && password.equals(CORRECT_PASSWORD);
-    }
     
     // ToString method for debugging
     @Override

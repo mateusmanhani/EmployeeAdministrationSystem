@@ -8,13 +8,16 @@ import java.util.Scanner;
  */
 public class ManagerMenu {
     
+    private static final String CORRECT_USERNAME = "Gnomeo"; //valid username to give access
+    private static final String CORRECT_PASSWORD = "smurf"; // valid password to give access
+    
     
     public static void start(Manager manager){
         Scanner scanner = new Scanner(System.in);
         
         //Manager login
         System.out.println("Welcome to the Manager Console Menu");
-        if (manager != null && manager.isAuthenticated()){
+        if (manager != null && isAuthenticated(manager,CORRECT_USERNAME,CORRECT_PASSWORD)){
             // if login successful, display menu
             displayMenu(scanner);
         }else {
@@ -44,5 +47,9 @@ public class ManagerMenu {
             default:
                 break;
         }
+    }
+    
+    public static boolean isAuthenticated(Manager manager, String correctUsername, String correctPassword){
+        return manager.getUsername().equals(correctUsername) && manager.getPassword().equals(correctPassword);
     }
 }
