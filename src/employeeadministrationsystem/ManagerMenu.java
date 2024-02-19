@@ -68,6 +68,7 @@ public class ManagerMenu {
                     case 4:
                         //exit
                         System.out.println("Exiting Menu.");
+                        validChoice = true;
                         break;
                     default:
                         break;

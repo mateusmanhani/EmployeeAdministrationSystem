@@ -17,7 +17,11 @@ public class Employee {
     // Constructor with parameter
     public Employee(String name, String email) {
         this.name = name;
-        this.email = email;
+        if(isValidEmail(email)){
+            this.email = email;
+        }else {
+            throw new IllegalArgumentException("Invalid email format: " + email);
+        }
         this.empNum = nextEmpNum++; //auto increment empNum to have unique employee numbers
     }
     
