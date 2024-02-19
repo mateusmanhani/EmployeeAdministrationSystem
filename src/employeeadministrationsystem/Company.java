@@ -1,7 +1,7 @@
 
 package employeeadministrationsystem;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 
 /**
@@ -10,33 +10,33 @@ import java.util.Iterator;
  */
 public class Company {
     private String companyName;
-    private ArrayList<Employee> staff;
+    private HashSet<Employee> staffSet;
     
     // Default constractor that initializes all fields
     public Company(){
         this.companyName = "Name Example";
-        this.staff = new ArrayList<Employee>();
+        this.staffSet = new HashSet<Employee>();
     }
     
     // Overloaded constructor
     public Company(String name){
         this.companyName = name;
-        this.staff = new ArrayList<Employee>();
+        this.staffSet = new HashSet<Employee>();
     }
     
     // add staff method
     public void addNewStaff(Employee newEmp){
-        staff.add(newEmp);
+        staffSet.add(newEmp);
     }
     
     // get number of employees
     public int getStaffNumber(){
-        return staff.size();
+        return staffSet.size();
     }
     
     // method to list all employee numbers with an employee number above a value given as parameter
     public void listEmployees(int empNumThreshold){
-        Iterator<Employee> iterator = staff.iterator();
+        Iterator<Employee> iterator = staffSet.iterator();
         while (iterator.hasNext()){
             Employee employee = iterator.next();
             if ( employee.getEmpNum() > empNumThreshold){
