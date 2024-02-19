@@ -4,6 +4,7 @@ package employeeadministrationsystem;
 /**
  *
  * @author Mateus Manhani
+ * GitHub repository: https://github.com/mateusmanhani/EmployeeAdministrationSystem
  */
 public class EmployeeTest {
 
