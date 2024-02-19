@@ -17,6 +17,7 @@ public class ManagerMenu {
         
         //Manager login
         System.out.println("Welcome to the Manager Console Menu");
+        //attempt login checking the manager username and password against the company's correct username and password
         if (manager != null && isAuthenticated(manager,CORRECT_USERNAME,CORRECT_PASSWORD)){
             // if login successful, display menu
             displayMenu(scanner, company);
