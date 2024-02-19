@@ -37,7 +37,7 @@ public class ManagerMenu {
         switch (choice){
             case 1:
                 //View current staff
-                
+                viewStaff(company);
                 break;
             case 2:
                 // Ask manager for input on the new employee to add to the staff
@@ -56,6 +56,10 @@ public class ManagerMenu {
             default:
                 break;
         }
+    }
+    
+    public static void viewStaff(Company company){
+        company.listEmployees(0);
     }
     
     public static boolean isAuthenticated(Manager manager, String correctUsername, String correctPassword){
