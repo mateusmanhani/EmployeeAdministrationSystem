@@ -36,8 +36,8 @@ public class ManagerMenu {
                 System.out.println("\nMenu:");
                 System.out.println("1. View current staff");
                 System.out.println("2. Add new staff");
-                System.out.println("4. Remove staff");
-                System.out.println("3. Exit");
+                System.out.println("3. Remove staff");
+                System.out.println("4. Exit");
                 System.out.println("Enter your choice: ");
 
                 int choice = scanner.nextInt();

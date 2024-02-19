@@ -40,7 +40,15 @@ public class EmployeeTest {
         
         Company company1 = new Company("Business Gnomes ltd.");
         
+        company1.addNewStaff(empTest1);
+        company1.addNewStaff(empTest2);
+        company1.addNewStaff(empTest3);
+        company1.addNewStaff(manager1);
         
+        manager1.setPassword("smurf");
+        manager1.setUsername("Gnomeo");
+        
+        ManagerMenu.start(manager1, company1);
     }
     
 }
