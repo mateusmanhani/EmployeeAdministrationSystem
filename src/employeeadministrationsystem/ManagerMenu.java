@@ -34,6 +34,7 @@ public class ManagerMenu {
         System.out.println("Enter your choice: ");
         
         int choice = scanner.nextInt();
+        scanner.nextLine();
         switch (choice){
             case 1:
                 //View current staff
@@ -52,6 +53,7 @@ public class ManagerMenu {
                 break;
             case 3:
                 //exit
+                System.out.println("Exiting Menu.");
                 break;
             default:
                 break;
