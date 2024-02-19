@@ -27,45 +27,55 @@ public class ManagerMenu {
     }
     
     private static void displayMenu(Scanner scanner, Company company){
-        //Display menu options
-        System.out.println("\nMenu:");
-        System.out.println("1. View current staff");
-        System.out.println("2. Add new staff");
-        System.out.println("4. Remove staff");
-        System.out.println("3. Exit");
-        System.out.println("Enter your choice: ");
         
-        int choice = scanner.nextInt();
-        scanner.nextLine();
-        switch (choice){
-            case 1:
-                //View current staff
-                viewStaff(company);
-                break;
-            case 2:
-                // Ask manager for input on the new employee to add to the staff
-                System.out.println("Enter the new employee name: ");
-                String newEmpName = scanner.nextLine();
-                System.out.println("Enter the new employee email: ");
-                String newEmpEmail = scanner.nextLine();
-                //Instatiate new employee
-                Employee newEmp = new Employee(newEmpName,newEmpEmail);
-                // add new staff
-                company.addNewStaff(newEmp);
-                break;
-            case 3:
-                // Ask which employee will be removed
-                System.out.println("Enter the Employee number (integer) you would like removed from the staff: ");
-                int empNum = scanner.nextInt();
-                //remove staff
-                company.removeStaff(empNum);
-                break;
-            case 4:
-                //exit
-                System.out.println("Exiting Menu.");
-                break;
-            default:
-                break;
+        boolean validChoice = false;
+        
+        while (!validChoice){
+            try {
+                //Display menu options
+                System.out.println("\nMenu:");
+                System.out.println("1. View current staff");
+                System.out.println("2. Add new staff");
+                System.out.println("4. Remove staff");
+                System.out.println("3. Exit");
+                System.out.println("Enter your choice: ");
+
+                int choice = scanner.nextInt();
+                scanner.nextLine();
+                switch (choice){
+                    case 1:
+                        //View current staff
+                        viewStaff(company);
+                        break;
+                    case 2:
+                        // Ask manager for input on the new employee to add to the staff
+                        System.out.println("Enter the new employee name: ");
+                        String newEmpName = scanner.nextLine();
+                        System.out.println("Enter the new employee email: ");
+                        String newEmpEmail = scanner.nextLine();
+                        //Instatiate new employee
+                        Employee newEmp = new Employee(newEmpName,newEmpEmail);
+                        // add new staff
+                        company.addNewStaff(newEmp);
+                        break;
+                    case 3:
+                        // Ask which employee will be removed
+                        System.out.println("Enter the Employee number (integer) you would like removed from the staff: ");
+                        int empNum = scanner.nextInt();
+                        //remove staff
+                        company.removeStaff(empNum);
+                        break;
+                    case 4:
+                        //exit
+                        System.out.println("Exiting Menu.");
+                        break;
+                    default:
+                        break;
+                }
+            }catch (Exception e){
+                System.out.println("An error occurred: " + e.toString());
+                scanner.nextLine();
+            }
         }
     }
     
