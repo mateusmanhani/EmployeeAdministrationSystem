@@ -5,14 +5,15 @@ package employeeadministrationsystem;
  * @author Mateus
  */
 public class Manager extends Employee {
+
     private String username;
     private String password;
-    
+
     // Constructor
-    public Manager(String name, String email, String username,String password){
-        super(name,email); // Call superclass constructor with name and email
+    public Manager(String name, String email, String username, String password) {
+        super(name, email); // Call superclass constructor with name and email
         this.username = username;
-        this.password = password;        
+        this.password = password;
     }
 
     public String getUsername() {
@@ -30,8 +31,7 @@ public class Manager extends Employee {
     public void setPassword(String password) {
         this.password = password;
     }
-    
-    
+
     // Used the following method for testing
     // ToString method for debugging
 //    @Override
@@ -44,5 +44,4 @@ public class Manager extends Employee {
 //            ", password='" + password + '\'' +
 //            '}';
 //    }
-    
 }
