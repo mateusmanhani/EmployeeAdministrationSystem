@@ -63,7 +63,6 @@ public class ManagerMenu {
                                 company.addNewStaff(newEmp);
                                 break;
                             }catch(IllegalArgumentException e){
-                                e.getMessage();
                                 System.out.println(e.getMessage() + " Please Try again.");
                             }
                         }

@@ -75,14 +75,15 @@ public class Employee {
         return matcher.matches();
     }
     
+    // Used the following method for testing
     // toString() method to represent the object as a String
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", empNum=" + empNum +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Employee{" +
+//                "name='" + name + '\'' +
+//                ", email='" + email + '\'' +
+//                ", empNum=" + empNum +
+//                '}';
+//    }
     
 }

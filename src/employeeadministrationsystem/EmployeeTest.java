@@ -23,9 +23,6 @@ public class EmployeeTest {
         projectGroup[2] = empTest3;
         
         System.out.println(Employee.getNextEmpNum());
-        System.out.println(empTest1);
-        System.out.println(empTest2);
-        System.out.println(empTest3);
         
         int m = 0;
         for (Employee emp : projectGroup){
@@ -34,7 +31,7 @@ public class EmployeeTest {
             }
         }
         
-        Manager manager1 = new Manager("mateus","mm@gamil.com","mateus1","1234");
+        Manager manager1 = new Manager("mateus","mm@gmail.com","mateus1","1234");
         
         System.out.println(manager1);
         

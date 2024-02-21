@@ -32,16 +32,17 @@ public class Manager extends Employee {
     }
     
     
+    // Used the following method for testing
     // ToString method for debugging
-    @Override
-    public String toString() {
-        return "Manager{" +
-            "name='" + getName() + '\'' +
-            ", email='" + getEmail() + '\'' +
-            ", empNum=" + getEmpNum() +
-            ", username='" + username + '\'' +
-            ", password='" + password + '\'' +
-            '}';
-}
+//    @Override
+//    public String toString() {
+//        return "Manager{" +
+//            "name='" + getName() + '\'' +
+//            ", email='" + getEmail() + '\'' +
+//            ", empNum=" + getEmpNum() +
+//            ", username='" + username + '\'' +
+//            ", password='" + password + '\'' +
+//            '}';
+    }
     
 }
