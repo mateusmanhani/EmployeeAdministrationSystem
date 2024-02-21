@@ -24,7 +24,7 @@ public class EmployeeTest {
         // Print current employee number after instantiating test employees
         System.out.println(Employee.getNextEmpNum());
 
-        // iterate through projectGroup array and print employee names
+        // iterate through projectGroup array and print employee names whose employee number is higher then 'm'
         int m = 0;
         for (Employee emp : projectGroup) {
             if (emp.getEmpNum() > m) {
