@@ -28,7 +28,8 @@ public class Company {
     public void addNewStaff(Employee newEmp) {
         staffSet.add(newEmp);
     }
-
+    
+    //remove staff method
     public void removeStaff(int empNum) {
 
         //create new iterator in order to iterate through staffset and check each employee's empNum against the one given as parameter
