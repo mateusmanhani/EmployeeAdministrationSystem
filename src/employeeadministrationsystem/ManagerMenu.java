@@ -48,16 +48,25 @@ public class ManagerMenu {
                         viewStaff(company);
                         break;
                     case 2:
-                        // Ask manager for input on the new employee to add to the staff
-                        System.out.println("Enter the new employee name: ");
-                        String newEmpName = scanner.nextLine();
-                        System.out.println("Enter the new employee email: ");
-                        String newEmpEmail = scanner.nextLine();// Need to catch exception if email is invalid before instatiating a new employee
-                        //Instatiate new employee
-                        Employee newEmp = new Employee(newEmpName,newEmpEmail);
-                        // add new staff
-                        company.addNewStaff(newEmp);
-                        break;
+                        boolean validInput = false;
+                        
+                        while (!validInput){
+                            try{
+                                // Ask manager for input on the new employee to add to the staff
+                                System.out.println("Enter the new employee name: ");
+                                String newEmpName = scanner.nextLine();
+                                System.out.println("Enter the new employee email: ");
+                                String newEmpEmail = scanner.nextLine();// Need to catch exception if email is invalid before instatiating a new employee
+                                //Instatiate new employee
+                                Employee newEmp = new Employee(newEmpName,newEmpEmail);
+                                // add new staff
+                                company.addNewStaff(newEmp);
+                                break;
+                            }catch(IllegalArgumentException e){
+                                e.getMessage();
+                                System.out.println(e.getMessage() + " Please Try again.");
+                            }
+                        }
                     case 3:
                         // Ask which employee will be removed
                         System.out.println("Enter the Employee number (integer) you would like removed from the staff: ");

@@ -57,7 +57,7 @@ public class Employee {
     }
     
     // method to ensure email is valid usign regex
-    private boolean isValidEmail(String email){
+    private boolean isValidEmail(String email) throws IllegalArgumentException{
         // Recipient name regex
         String recipientNameRegex = "^[a-zA-Z0-9._%+-]{1,64}";
         // Domain name regex
