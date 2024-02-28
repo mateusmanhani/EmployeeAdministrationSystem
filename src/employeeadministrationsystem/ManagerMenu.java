@@ -65,6 +65,7 @@ public class ManagerMenu {
                                 System.out.println(e.getMessage() + " Please Try again.");
                             }
                         }
+                        break;
                     case 3:
                         // Ask which employee will be removed
                         System.out.println("Enter the Employee number (integer) you would like removed from the staff: ");
